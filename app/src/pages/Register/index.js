@@ -11,12 +11,12 @@ import * as Animatable from 'react-native-animatable'
 
 import {useNavigation} from '@react-navigation/native'
 
-import './src/utils/i18n'
-import { UseTranslation } from "react-i18next";
+import i18n from "../../utils/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Register() {w
     const navigation = useNavigation();
-    const {t, i18n} = useTransition();
+    const {t, i18n} = useTranslation();
 
     return (
         <><View style={styles.containerLogo}>
