@@ -32,7 +32,12 @@ export default function Welcome() {
                 onPress={ () => changeLanguage('en') }
                 style={[
                     styles.langButton, {
-                        borderColor: 'FFFF'
+                        borderColor: 'FFFF',
+                        width: '10%',
+                        alignSelf: 'center',
+                        bottom: '15%',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                     }
                 ]}
                 >
@@ -43,7 +48,12 @@ export default function Welcome() {
                 onPress={ () => changeLanguage('pt') }
                 style={[
                     styles.langButton, {
-                        borderColor: 'FFFF'
+                        borderColor: 'FFFF',
+                        width: '10%',
+                        alignSelf: 'center',
+                        bottom: '15%',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                     }
                 ]}
                 >
@@ -62,7 +72,7 @@ export default function Welcome() {
             </View>
 
             <Animatable.View delay={800} animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>{t('"Na jornada da adoção, não apenas salvamos vidas, mas também encontramos nossa própria redenção. Adote um animal e escreva uma história de amor e compaixão que ecoará para sempre."')}</Text>
+                <Text style={styles.title}>{t('Na jornada da adoção, não apenas salvamos vidas, mas também encontramos nossa própria redenção. Adote um animal e escreva uma história de amor e compaixão que ecoará para sempre.')}</Text>
                 <Text style={styles.text}>{t('Faça o login para começar essa nova história!')}</Text>
 
                 <TouchableOpacity 

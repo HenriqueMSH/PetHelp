@@ -7,7 +7,7 @@ import pt from './pt.json'
 i18n.use(initReactI18next).init({
     compatibilityJSON: 'v3',
     lng: 'en',
-    resorces: {
+    resources: {
         en: en,
         pt: pt
     },
