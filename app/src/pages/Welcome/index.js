@@ -33,11 +33,8 @@ export default function Welcome() {
                 style={[
                     styles.langButton, {
                         borderColor: 'FFFF',
-                        width: '10%',
-                        alignSelf: 'center',
-                        bottom: '15%',
-                        alignItems: 'center',
-                        justifyContent: 'center'
+                        borderRadius: 50,
+                        width: '40%'
                     }
                 ]}
                 >
@@ -49,11 +46,8 @@ export default function Welcome() {
                 style={[
                     styles.langButton, {
                         borderColor: 'FFFF',
-                        width: '10%',
-                        alignSelf: 'center',
-                        bottom: '15%',
-                        alignItems: 'center',
-                        justifyContent: 'center'
+                        borderRadius: 50,
+                        width: '40%'
                     }
                 ]}
                 >

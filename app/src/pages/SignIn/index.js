@@ -18,6 +18,10 @@ export default function SignIn() {
     const navigation = useNavigation();
     const {t, i18n} = useTranslation();
 
+    const changeLanguage = value => {
+        i18n.changeLanguage(value)
+    }
+
     return (
         <><View style={styles.containerLogo}>
             <Animatable.Image
@@ -28,6 +32,36 @@ export default function SignIn() {
         </View>
         
         <View style={styles.container}>
+
+            
+        <View style={styles.language}>
+                <TouchableOpacity
+                onPress={ () => changeLanguage('en') }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Inglês</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                onPress={ () => changeLanguage('pt') }
+                style={[
+                    styles.langButton, {
+                        borderColor: 'FFFF',
+                        borderRadius: 50,
+                        width: '40%'
+                    }
+                ]}
+                >
+                    <Text style={styles.langText}>Português (Brasil)</Text>
+                </TouchableOpacity>
+            </View>
+
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
                 <Text style={styles.message}> {t('Bem-vindo')} (a) </Text>
             </Animatable.View>
@@ -35,12 +69,12 @@ export default function SignIn() {
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
                 <Text style={styles.title}>{t('Email')}</Text>
                 <TextInput
-                    placeholder="Digite um email..."
+                    placeholder={t('Digite um email...')}
                     style={styles.input} />
 
                     <Text style={styles.title}>{t('Senha')}</Text>
                     <TextInput
-                        placeholder="Sua senha"
+                        placeholder={t('Sua senha')}
                         style={styles.input} />
 
                     <TouchableOpacity style={styles.button}>
@@ -119,5 +153,17 @@ const styles = StyleSheet.create({
     },
     registerText:{
         color: '#a1a1a1'
+    },
+    langButton:{
+        borderWidth: 1,
+        padding: 4,
+        borderRadius: 4,
+        marginRight: 4, 
+        marginLeft: 4,
+    },
+    langText:{
+        marginRight: 4,
+        marginLeft: 4,
+        color: '#FFF'
     }
 })
